@@ -45,8 +45,8 @@ public class Main {
 
 			MyHttpServer.run(host, httpPort, command);
 
-			System.out.println("[+] Remote classloader configured. Use the following payload:");
-			System.out.println("http://" + host.getHostAddress() + ":" + httpPort + "/ExportObject\n");
+			System.out.println("[+] Remote classloader configured.");
+			System.out.println("Listening on http://" + host.getHostAddress() + ":" + httpPort + "/ - Class name: ExportObject\n");
 
 		} catch (ParseException | UnknownHostException e) {
 			System.out.println(e.getMessage());
