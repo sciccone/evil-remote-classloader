@@ -1,5 +1,5 @@
 # evil-remote-classloader
-Simplified Java remote classloader to server a malicious class
+Simplified Java remote classloader to serve a malicious class
 
 
 ## Compile
